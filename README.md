@@ -1,3 +1,4 @@
+![icon](https://github.com/bruhmoment6420/Newserily/blob/main/assets/icon.png)
 # Newserily
 All your newspapers in one place and one app. I wrote this app when I had some free time. If you want to run the app check the instructions below
 # Running
