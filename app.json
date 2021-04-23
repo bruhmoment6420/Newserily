@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Newserily",
-    "slug": "newserily",
+    "slug": "Newserily",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,12 +23,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.tahlial.newserily"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "A single app to house all your news papers."
+    "description": "An app to show all your newspapers in one place."
   }
 }

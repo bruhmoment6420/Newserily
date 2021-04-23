@@ -1,39 +1,38 @@
-import * as React from 'react';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import { AnimatedTabBarNavigator } from 'react-native-animated-nav-tab-bar';
+import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 
-import NewsScreen from './screens/NewsScreen';
-import ContactScreen from './screens/ContactScreen';
+import NewspaperScreen from './screens/NewspaperScreen';
+import SettingsScreen from './screens/SettingsScreen';
 
-const Tabs = AnimatedTabBarNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tabs.Navigator>
-        <Tabs.Screen
-          name="News"
-          component={NewsScreen}
-          options={{
-            tabBarIcon: ({ focused, color, size }) => {
-              return (
-                <Ionicons name={'md-newspaper'} size={size} color={color} />
-              );
-            },
-          }}
-        />
-        <Tabs.Screen
-          name="Contact"
-          component={ContactScreen}
-          options={{
-            tabBarIcon: ({ focused, color, size }) => {
-              return <Ionicons name={'md-mail'} size={size} color={color} />;
-            },
-          }}
-        />
-      </Tabs.Navigator>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+
+            if (route.name === 'News') {
+              iconName = focused ? 'md-newspaper' : 'md-newspaper-outline';
+            } else if (route.name === 'Settings') {
+              iconName = focused ? 'md-cog' : 'md-cog-outline';
+            }
+
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+        })}
+        tabBarOptions={{
+          activeTintColor: '#6200ee',
+          inactiveTintColor: 'gray',
+        }}
+      >
+        <Tab.Screen name="News" component={NewspaperScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
