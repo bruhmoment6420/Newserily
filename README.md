@@ -1,5 +1,8 @@
-![icon](https://github.com/bruhmoment6420/Newserily/blob/main/assets/icon.png)
-# Newserily
+<h1 align="center">
+  <img src="https://github.com/bruhmoment6420/Newserily/blob/main/assets/icon.png" width="250" height="250"/><br/>
+  Newserily
+</h1>
+
 All your newspapers in one place and one app. I wrote this app when I had some free time. If you want to run the app check the instructions below.
 # Running
 These are the following ways to run the app:
