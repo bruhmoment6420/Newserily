@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Linking, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import { Divider } from 'react-native-paper'
 
 export default function About() {
